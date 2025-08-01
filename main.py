@@ -1,5 +1,12 @@
-from calculadora import soma
+from src.calculadora import soma
 
-resultado = soma(5, 3)
-print(f"A soma é: {resultado}")
-print(soma('15', 5))  # Isso deve gerar um erro de asserção
+# print(soma(10, 20))
+# print(soma(-10, 20))
+# print(soma(1.5, 2.5))
+
+try:
+    print(soma('15', 15))
+except AssertionError as e:
+    print(f'Conta inválida: {e}')
+
+print('Conta', soma(25, 25))
